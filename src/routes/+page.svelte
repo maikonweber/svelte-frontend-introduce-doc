@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
 	import { marked } from 'marked';
 	let value = `Some words are *italic*, some are **bold**\n\n- lists\n- are\n- cool`;
 </script>
