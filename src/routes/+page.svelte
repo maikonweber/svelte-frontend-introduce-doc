@@ -87,8 +87,7 @@ import { getRandomNumber } from "../utilis/utilis";
 
 </Packageinfo>
 
-
-
+// awai
 <style>
     h1 {
         color : goldenrod;
