@@ -1,18 +1,33 @@
 <script>
 // @ts-nocheck
-    import { error } from "@sveltejs/kit";
-import { getRandomNumber } from "../utilis/utilis";
-    import Nested from "./Nested.svelte";
-    import Packageinfo from "./Packageinfo.svelte";
-    import Inner from './inner.svelte';    
+import BigRedButton from "./BigRedButton.svelte";
+import { onMount } from 'svelte';
+
+import horn from './Button.svelte';
+
+console.log(horn)
+let audio;
+onMount(() => {
+        if (typeof Audio === 'undefined') {
+            return;
+        }
+    
+       audio = new Audio();
+       audio.src = horn
+    })
 
     function handleMessage(event) {
         alert(event.detail.text);
     }
+
+    function handleClick () {
+        audio.play();
+    } 
+
 </script>
 
 
-<Inner on:message={handleMessage} />
+<BigRedButton on:click={handleClick}>
 
+</BigRedButton>
 
-<style></style>
