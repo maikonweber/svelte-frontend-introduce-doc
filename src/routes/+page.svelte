@@ -1,33 +1,14 @@
 <script>
 // @ts-nocheck
-import BigRedButton from "./BigRedButton.svelte";
-import { onMount } from 'svelte';
+    let name  "word";
+<script>
 
-import horn from './Button.svelte';
+<input bind:value={name}>
 
-console.log(horn)
-let audio;
-onMount(() => {
-        if (typeof Audio === 'undefined') {
-            return;
-        }
-    
-       audio = new Audio();
-       audio.src = horn
-    })
-
-    function handleMessage(event) {
-        alert(event.detail.text);
-    }
-
-    function handleClick () {
-        audio.play();
-    } 
-
-</script>
+</input>
 
 
-<BigRedButton on:click={handleClick}>
 
-</BigRedButton>
-
+<h1>
+    Heello {name}
+</h1>
