@@ -50,7 +50,7 @@ import { getRandomNumber } from "../utilis/utilis";
     Remove first thing
 </button>
 
-<div on:pointermove={handleMove}>
+<div on:pointermove={(e) => { m = { x: e.clientX, y: e.clientY}}}>
     the point is at {m.x} x {m.y} 
 
 </div>
