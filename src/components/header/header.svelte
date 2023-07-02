@@ -24,5 +24,4 @@
         border: 3rem;
         border-radius: 5px;
     }
-
 </style>
