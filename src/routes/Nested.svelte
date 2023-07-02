@@ -1,6 +1,10 @@
 <script>
     let count = 0;
 
+    $: { 
+        console.log(`the console log ${count}`)
+        console.log(`Log in Blocck`)
+    };
 
     function increment () {
         count += 1;
