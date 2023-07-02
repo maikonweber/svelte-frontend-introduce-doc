@@ -1,0 +1,1 @@
+<h1> This another component </h1>
